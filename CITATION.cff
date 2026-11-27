@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: If you use this formalization, please cite it as below. The companion paper
-  of the same title is attached to the v1.0.0 release of this repository
-  (https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0)
-  and has been submitted to Hexagon.
+message: If you use this formalization, please cite it as below. The paper of the
+  same title is published on Hexagon as 2611.01171 (https://hexagonmath.org/abs/2611.01171),
+  and the releases of this repository
+  (https://github.com/macgregor-sudo/cartan-cubic-planes/releases) attach it as a PDF
+  with its TeX source.
 title: On the planes of Cartan's cubics and the missing seven — Lean 4 formalization
 type: software
 authors:

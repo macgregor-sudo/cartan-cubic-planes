@@ -2,7 +2,7 @@
   "version": "v0.4",
   "project": {
     "name": "On the planes of Cartan's cubics and the missing seven",
-    "description": "For m≥1 complex fields, add one real trilinear term per unordered triple of distinct fields to Σᵢ Re(zᵢ³). If the resulting cubic’s real gradient norm depends only on |z|, then m is 1, 4 or 13. Both larger cases occur. Up to real isometry for the trace metric, their cubics are √6 times the trace of the Jordan cube on traceless Hermitian 3×3 matrices over ℂ and the octonions, respectively.\n\nFor a finite-dimensional real Euclidean cubic W(x)=d(x,x,x) with symmetric trilinear form d, define ⟨x∘y,z⟩=d(x,y,z). Assume the eikonal law |x∘x|²=c|x|⁴ with c>0. Every orthogonal decomposition into at least two nonzero product-closed subspaces consists of four lines, four planes, thirteen planes, or nine planes and an eight-dimensional block. Each pattern occurs at c=1.\n\nFor an orthogonal decomposition of such an eikonal cubic into three or more closed planes, a triple’s share is ½tr(PQ), where P and Q project orthogonally onto the third plane and the span of products from the first two, respectively. Shares lie in [0,1]. For each pair the remaining shares sum to two. For thirteen planes at least 52 unordered triples have positive share.\n\nFor triples of pairwise unbiased orthonormal bases of ℍ³, the planes spanned by their rank-one projectors centered at I/3 have minimum share 1−1/√3. Every pairwise unbiased family has at most five bases. In the Albert algebra of Hermitian 3×3 octonionic matrices, twelve pairwise unbiased Jordan frames have a thirteenth unbiased to all, unique up to ordering its idempotents. Systems of thirteen pairwise unbiased Albert frames with exactly 52 unordered triples of positive trace share exist and form one orbit under Jordan automorphisms and relabelling of the frames and of their idempotents.\n\nCompare cubics of equal eikonal strength c, each decomposed into at least two orthogonal closed planes. Scaling mixed terms by t gives Wₜ with energy |∇Wₜ|²/(9c). On a common decomposition, energy on every three-plane sum determines t and, for t∉{0,1}, W and Wₜ up to one sign. At t=0 or t=1, another eikonal cubic of the same strength on the same plane system gives identical energy everywhere at t, and its scaled cubic lies outside {Wₜ, −Wₜ}. If both parameters are positive and differ from one, equal energies everywhere identify the planes up to permutation.\n\nThis Lean development accompanies the paper of the same title, which is available at https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0 and has been submitted to Hexagon. The README states all thirteen compared theorems and lists further results.",
+    "description": "For m≥1 complex fields, add one real trilinear term per unordered triple of distinct fields to Σᵢ Re(zᵢ³). If the resulting cubic’s real gradient norm depends only on |z|, then m is 1, 4 or 13. Both larger cases occur. Up to real isometry for the trace metric, their cubics are √6 times the trace of the Jordan cube on traceless Hermitian 3×3 matrices over ℂ and the octonions, respectively.\n\nFor a finite-dimensional real Euclidean cubic W(x)=d(x,x,x) with symmetric trilinear form d, define ⟨x∘y,z⟩=d(x,y,z). Assume the eikonal law |x∘x|²=c|x|⁴ with c>0. Every orthogonal decomposition into at least two nonzero product-closed subspaces consists of four lines, four planes, thirteen planes, or nine planes and an eight-dimensional block. Each pattern occurs at c=1.\n\nFor an orthogonal decomposition of such an eikonal cubic into three or more closed planes, a triple’s share is ½tr(PQ), where P and Q project orthogonally onto the third plane and the span of products from the first two, respectively. Shares lie in [0,1]. For each pair the remaining shares sum to two. For thirteen planes at least 52 unordered triples have positive share.\n\nFor triples of pairwise unbiased orthonormal bases of ℍ³, the planes spanned by their rank-one projectors centered at I/3 have minimum share 1−1/√3. Every pairwise unbiased family has at most five bases. In the Albert algebra of Hermitian 3×3 octonionic matrices, twelve pairwise unbiased Jordan frames have a thirteenth unbiased to all, unique up to ordering its idempotents. Systems of thirteen pairwise unbiased Albert frames with exactly 52 unordered triples of positive trace share exist and form one orbit under Jordan automorphisms and relabelling of the frames and of their idempotents.\n\nCompare cubics of equal eikonal strength c, each decomposed into at least two orthogonal closed planes. Scaling mixed terms by t gives Wₜ with energy |∇Wₜ|²/(9c). On a common decomposition, energy on every three-plane sum determines t and, for t∉{0,1}, W and Wₜ up to one sign. At t=0 or t=1, another eikonal cubic of the same strength on the same plane system gives identical energy everywhere at t, and its scaled cubic lies outside {Wₜ, −Wₜ}. If both parameters are positive and differ from one, equal energies everywhere identify the planes up to permutation.\n\nThis Lean development accompanies the paper of the same title, which is published on Hexagon as 2611.01171 and is attached to the releases of this repository. The README states all thirteen compared theorems and lists further results.",
     "authors": [
       {
         "name": "Robert R. MacGregor",
@@ -43,7 +43,7 @@
       "relationship": "formalizes",
       "id": "https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0",
       "location": "Theorem A, Theorem B and the results indexed in docs/PAPER-COVERAGE.tsv",
-      "note": "The paper is attached to the v1.0.0 release of this repository as a PDF and its TeX source, and has been submitted to Hexagon. The repository's README and docs/PAPER-COVERAGE.tsv identify its numbered statements and the corresponding Lean declarations."
+      "note": "The paper is published on Hexagon as 2611.01171 and is attached to the v1.0.0 release of this repository as a PDF and its TeX source. The repository's README and docs/PAPER-COVERAGE.tsv identify its numbered statements and the corresponding Lean declarations."
     },
     {
       "type": "paper",
@@ -54,7 +54,7 @@
       "relationship": "background",
       "id": "doi:10.1007/BF01580289",
       "location": "Part I, §I, nos. 2–6, pp. 337–341, Eqs. (13)–(17), and Part II, §§VII–IX, pp. 359–367",
-      "note": "The classical isoparametric cubic models and their harmonic classification. The Lean library proves the marked harmonic identification at a unit idempotent."
+      "note": "The classical isoparametric cubic models and their harmonic classification. The Lean development proves the harmonic identification at a chosen unit idempotent of the cubic product."
     },
     {
       "type": "paper",
@@ -65,7 +65,7 @@
       "relationship": "independently-proves",
       "id": "https://arxiv.org/abs/1001.2387v2",
       "location": "Theorem 1.1, Eq. (3) and §3",
-      "note": "The Lean proof derives the nonharmonic axial normal form by taking a trace of the Peirce pair identity. This proves the nonharmonic alternative independently and makes the closed-decomposition theorem unconditional."
+      "note": "The Lean proof derives Tkachev's reducible normal form s³−3s|u|² for nonharmonic eikonal cubics by taking a trace of the Peirce pair identity. This proves the nonharmonic alternative independently and makes the closed-decomposition theorem unconditional."
     },
     {
       "type": "paper",
@@ -76,7 +76,7 @@
       "relationship": "background",
       "id": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN252457811_1898/LOG_0034.pdf",
       "location": "1898, pp. 309–316",
-      "note": "The dimension restriction for norm-preserving bilinear multiplication. The marked-slot proof obtains it by unitizing and applying the Euclidean composition-algebra classification."
+      "note": "The dimension restriction for norm-preserving bilinear multiplication. The Lean proof, on the joint eigenspaces at a unit idempotent, identifies the three spaces isometrically to obtain a unital norm-composing product and applies the Euclidean composition-algebra classification."
     },
     {
       "type": "paper",
@@ -110,7 +110,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/1905.00071",
       "location": "§8, p. 36, Eqs. (8.4)–(8.6)",
-      "note": "Trace-cube coordinates for the Cartan cubics, including the octonionic case."
+      "note": "Trace-cube coordinates for Cartan's cubics, including the octonionic case."
     },
     {
       "type": "paper",
@@ -121,7 +121,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/0902.0431v1",
       "location": "§§1.14–1.16, Lemmas 2.1.1(2) and 2.2.1(2), Prop. 2.3.7, Prop. 2.4.1(2), Thms. 2.6.1 and 2.7.1, Prop. 2.8.2, and §2.12",
-      "note": "The native frame-stabilizer theorem verifies the cyclic-slot triality characterization. This source also records the compact Albert trace and spectral facts, transitivity, the diagonal Spin(8), and compact first-Tits coordinates."
+      "note": "The frame-stabilizer theorem of the development verifies the triality characterization in cyclic octonion coordinates. This source also records the trace and spectral facts of the compact Albert algebra, transitivity, the diagonal Spin(8), and compact coordinates of Tits's construction of the Albert algebra."
     },
     {
       "type": "paper",
@@ -191,7 +191,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/0708.4051v1",
       "location": "§4, p. 15, Theorems 5.1 and 5.4, proof of Theorem 5.4, pp. 24–25, and Problem 6.3",
-      "note": "Order-three quaternionic Hadamard normalization, the unbiased-triple normal form used for the sharp share bound, and the previous dimension bound."
+      "note": "Order-three quaternionic Hadamard normalization, the description of unbiased triples from which the normal form for the sharp share bound is derived, and the previous dimension bound."
     },
     {
       "type": "paper",
@@ -238,7 +238,7 @@
       ],
       "relationship": "background",
       "location": "Graduate Texts in Mathematics 6, Springer, New York, 1973. Order-three projective planes.",
-      "note": "The order-three projective plane is the incidence structure of the closed quartets at equality.",
+      "note": "At 52 positive shares the closed sets of four planes are the lines of the projective plane of order three.",
       "id": "Graduate Texts in Mathematics 6, Springer, New York, 1973"
     },
     {
@@ -250,7 +250,7 @@
       "relationship": "background",
       "id": "doi:10.1016/0021-8693(90)90176-O",
       "location": "Eqs. (2.9), (4.3)–(4.6)",
-      "note": "The ternary Albert grading underlying the reference thirteen-plane system."
+      "note": "The 𝔽₃³-grading of the Albert algebra underlying the reference thirteen-plane system."
     },
     {
       "type": "paper",
@@ -262,7 +262,7 @@
       "relationship": "background",
       "id": "doi:10.4171/RMI/585",
       "location": "§2.4, Eq. (4), and §3.4",
-      "note": "The first-Tits norm formula and the ternary grading on the Albert algebra."
+      "note": "The norm formula of Tits's first construction and the 𝔽₃³-grading of the Albert algebra."
     },
     {
       "type": "paper",
@@ -274,7 +274,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/1009.1462",
       "location": "§4.5, Theorem 4.8 and Remark 4.9",
-      "note": "The Weyl group and stabilizer of the ternary Albert grading give context for the comparison with the grading orbit."
+      "note": "The Weyl group and stabilizer of the 𝔽₃³-grading of the Albert algebra give context for the comparison with the grading orbit."
     },
     {
       "type": "paper",
@@ -288,7 +288,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/quant-ph/0506089",
       "location": "Theorems 5.1–5.2",
-      "note": "The complex relation between mutually unbiased bases and orthogonal Lie decompositions."
+      "note": "The relation, for complex Lie algebras, between mutually unbiased bases and orthogonal decompositions into Cartan subalgebras."
     },
     {
       "type": "paper",
@@ -299,7 +299,7 @@
       "relationship": "background",
       "id": "https://www.math.stonybrook.edu/~aknapp/pdf-files/1-27.pdf",
       "location": "Theorem 3.6, p. 16, and §3, pp. 16–17",
-      "note": "Conjugacy and complexification of compact Cartan subalgebras. The library proves native conjugacy and the needed complexification statements."
+      "note": "Conjugacy and complexification of compact Cartan subalgebras. The development proves the conjugacy and complexification statements it needs."
     },
     {
       "type": "paper",
@@ -310,7 +310,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/0810.2737",
       "location": "§1 and Theorem 3.5",
-      "note": "The ternary grading of complex 𝔣₄ and its Cartan decomposition."
+      "note": "The 𝔽₃³-grading of complex 𝔣₄ (a Jordan grading) and the orthogonal decomposition into Cartan subalgebras attached to it."
     },
     {
       "type": "book",
@@ -322,7 +322,7 @@
       "relationship": "background",
       "id": "doi:10.1515/9783110901757",
       "location": "Theorem 3.1.2, pp. 85–86",
-      "note": "Orthogonal Cartan decompositions associated with the ternary grading."
+      "note": "Orthogonal decompositions of complex simple Lie algebras into Cartan subalgebras, including those associated with the 𝔽₃³-grading."
     },
     {
       "type": "paper",
@@ -333,7 +333,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/2609.25086v1",
       "location": "Lemma 5.1",
-      "note": "The invariants of the traceless Albert representation. The formal proof derives scalarity of the commutant directly."
+      "note": "The invariants of F₄ on the traceless part of the Albert algebra. The formal proof derives scalarity of the commutant directly."
     },
     {
       "type": "paper",
@@ -377,7 +377,7 @@
       ],
       "relationship": "background",
       "location": "Academic Press, 1966. Commutator derivations in Jordan algebras.",
-      "note": "The commutators of the multiplication operators are derivations. The library's second-row theorem assumes Tits's magic-square type identifications.",
+      "note": "The commutators of the multiplication operators are derivations. The second-row theorem of the development takes the identifications of Tits's magic-square construction as input.",
       "id": "Academic Press, 1966"
     },
     {
@@ -402,7 +402,7 @@
       "relationship": "background",
       "id": "https://arxiv.org/abs/2107.14515",
       "location": "Eqs. (2.1)–(2.4), p. 5",
-      "note": "The one-loop tensor equations and the gradient potential in the conventions used for the flow."
+      "note": "The one-loop renormalization-group equations and the A-function, in the conventions used for the flow."
     },
     {
       "type": "paper",
@@ -446,7 +446,7 @@
     {
       "id": "https://github.com/macgregor-sudo/albert-sequential-measurements/tree/10e5ca8ce341a1cb3a812569d3081005a40007c8",
       "relationship": "builds-on",
-      "note": "Albert Sequential Measurements v2.0.0 supplies the native compact Albert algebra and operators. Its standalone statement supplies Cayley–Dickson and octonionic Hermitian coordinate definitions."
+      "note": "Albert Sequential Measurements v2.0.0 supplies the compact Albert algebra and the operators on it used by the development. Its Challenge statement file supplies Cayley–Dickson and octonionic Hermitian coordinate definitions."
     },
     {
       "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-11-27-000005&version=1",
@@ -456,27 +456,27 @@
     {
       "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-09-13-000001&version=1",
       "relationship": "adapts",
-      "note": "First Tits coordinates and identities adapted from the split-frame source at dd06ef5d423a0e4a5d814d2c221e999b98887ee1. The source headers and notices identify the specific files."
+      "note": "Coordinates and identities of Tits's construction of the Albert algebra adapted from the split-frame source at dd06ef5d423a0e4a5d814d2c221e999b98887ee1. The source headers and notices identify the specific files."
     },
     {
       "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-16-000013&version=1",
       "relationship": "builds-on",
-      "note": "The pinned sequential-measurements package carries the native Glennie Jordan algebra adapted from the compact Albert recognition source at 40d3b344180d9ddb78aaa2876873377c1e631515."
+      "note": "The pinned sequential-measurements package carries the compact Albert algebra adapted from the compact Albert recognition source at 40d3b344180d9ddb78aaa2876873377c1e631515."
     },
     {
       "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-29-000034&version=1",
       "relationship": "adapts",
-      "note": "ThirteenPlanes/NativeTits.lean specializes the compact first-Tits coordinates TitsS.titsOfNative from Proofs/TitsForm.lean in the earlier tight 39-point formalization. The specialization uses the pinned native Albert carrier and takes the third slot by conjugate transpose. Original source at https://github.com/macgregor-sudo/tight-39-code/blob/46f01c135aacea9003435e7f1dc99b4a69568e83/Proofs/TitsForm.lean#L61."
+      "note": "ThirteenPlanes/NativeTits.lean specializes the compact coordinates of Tits's construction, TitsS.titsOfNative from Proofs/TitsForm.lean in the earlier tight 39-point formalization. The specialization uses the compact Albert algebra of the pinned dependency and takes the third component to be the conjugate transpose of the second. Original source at https://github.com/macgregor-sudo/tight-39-code/blob/46f01c135aacea9003435e7f1dc99b4a69568e83/Proofs/TitsForm.lean#L61."
     },
     {
       "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-08-29-000018&version=1",
       "relationship": "builds-on",
-      "note": "The isotope proofs use CompositionAlgebras.Composition.Defs and CompositionAlgebras.Composition.Classification through the attributed port of composition-algebras at 98d4437ce1bfd8d042b8383e0cfe28ec3e595eee in the sequential-measurements package."
+      "note": "The proofs that turn a norm-composing bilinear product into a unital composition algebra use CompositionAlgebras.Composition.Defs and CompositionAlgebras.Composition.Classification through the attributed port of composition-algebras at 98d4437ce1bfd8d042b8383e0cfe28ec3e595eee in the sequential-measurements package."
     },
     {
       "id": "https://github.com/TauCetiProject/TauCeti/tree/d91980bdc255e6e50506be147ad9bcb88eb9fcc0",
       "relationship": "adapts",
-      "note": "The proof library includes four complete Apache-2.0 Tau Ceti modules at d91980bdc255e6e50506be147ad9bcb88eb9fcc0. Each preserves its original source and notices and has one appended provenance comment. THIRD_PARTY_NOTICES.md lists the exact files and links."
+      "note": "The development includes four complete Apache-2.0 Tau Ceti modules at d91980bdc255e6e50506be147ad9bcb88eb9fcc0. Each preserves its original source and notices and has one appended provenance comment. THIRD_PARTY_NOTICES.md lists the exact files and links."
     }
   ],
   "automation": {
@@ -522,13 +522,13 @@
     "notes": "Separate AI reviewers checked manuscript arguments and matched numbered statements to Lean declarations, including the standalone comparison statements. The review recorded here is AI review."
   },
   "status": {
-    "scope": "Thirteen declarations selected in comparator.json. The statement module imports only Mathlib. The proof library uses pinned Mathlib and Albert Sequential Measurements and includes four attributed Tau Ceti source files. docs/PAPER-COVERAGE.tsv indexes the broader proof library against the manuscript.",
+    "scope": "Thirteen declarations selected in comparator.json. The statement module imports only Mathlib. The development uses pinned Mathlib and Albert Sequential Measurements and includes four attributed Tau Ceti source files. docs/PAPER-COVERAGE.tsv indexes the broader development against the paper.",
     "permitted_axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "challenge_placeholders": "Each designated statement hole specifies a comparison target. The Solution uses a separate copy of the mathematical definitions.",
+    "challenge_placeholders": "Each sorry placeholder in the Challenge states one compared theorem. The Solution proves it using a separate copy of the mathematical definitions.",
     "main_results": [
       {
         "name": "Challenge.fields_classification",
