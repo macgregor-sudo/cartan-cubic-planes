@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: If you use this formalization, please cite it as below. The companion paper
+  of the same title is attached to the v1.0.0 release of this repository
+  (https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0)
+  and has been submitted to Hexagon.
+title: On the planes of Cartan's cubics and the missing seven — Lean 4 formalization
+type: software
+authors:
+- family-names: MacGregor
+  given-names: Robert R.
+  orcid: https://orcid.org/0009-0003-1734-8054
+license: Apache-2.0

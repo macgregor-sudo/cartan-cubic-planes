@@ -1,0 +1,587 @@
+{
+  "version": "v0.4",
+  "project": {
+    "name": "On the planes of Cartan's cubics and the missing seven",
+    "description": "For m≥1 complex fields, add one real trilinear term per unordered triple of distinct fields to Σᵢ Re(zᵢ³). If the resulting cubic’s real gradient norm depends only on |z|, then m is 1, 4 or 13. Both larger cases occur. Up to real isometry for the trace metric, their cubics are √6 times the trace of the Jordan cube on traceless Hermitian 3×3 matrices over ℂ and the octonions, respectively.\n\nFor a finite-dimensional real Euclidean cubic W(x)=d(x,x,x) with symmetric trilinear form d, define ⟨x∘y,z⟩=d(x,y,z). Assume the eikonal law |x∘x|²=c|x|⁴ with c>0. Every orthogonal decomposition into at least two nonzero product-closed subspaces consists of four lines, four planes, thirteen planes, or nine planes and an eight-dimensional block. Each pattern occurs at c=1.\n\nFor an orthogonal decomposition of such an eikonal cubic into three or more closed planes, a triple’s share is ½tr(PQ), where P and Q project orthogonally onto the third plane and the span of products from the first two, respectively. Shares lie in [0,1]. For each pair the remaining shares sum to two. For thirteen planes at least 52 unordered triples have positive share.\n\nFor triples of pairwise unbiased orthonormal bases of ℍ³, the planes spanned by their rank-one projectors centered at I/3 have minimum share 1−1/√3. Every pairwise unbiased family has at most five bases. In the Albert algebra of Hermitian 3×3 octonionic matrices, twelve pairwise unbiased Jordan frames have a thirteenth unbiased to all, unique up to ordering its idempotents. Systems of thirteen pairwise unbiased Albert frames with exactly 52 unordered triples of positive trace share exist and form one orbit under Jordan automorphisms and relabelling of the frames and of their idempotents.\n\nCompare cubics of equal eikonal strength c, each decomposed into at least two orthogonal closed planes. Scaling mixed terms by t gives Wₜ with energy |∇Wₜ|²/(9c). On a common decomposition, energy on every three-plane sum determines t and, for t∉{0,1}, W and Wₜ up to one sign. At t=0 or t=1, another eikonal cubic of the same strength on the same plane system gives identical energy everywhere at t, and its scaled cubic lies outside {Wₜ, −Wₜ}. If both parameters are positive and differ from one, equal energies everywhere identify the planes up to permutation.\n\nThis Lean development accompanies the paper of the same title, which is available at https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0 and has been submitted to Hexagon. The README states all thirteen compared theorems and lists further results.",
+    "authors": [
+      {
+        "name": "Robert R. MacGregor",
+        "orcid": "0009-0003-1734-8054"
+      }
+    ],
+    "responsible_maintainers": [
+      "Robert R. MacGregor"
+    ],
+    "license": "Apache-2.0"
+  },
+  "classification": {
+    "arxiv": [
+      "math.RA",
+      "math.DG",
+      "quant-ph",
+      "math.RT",
+      "cs.LO"
+    ],
+    "msc2020": [
+      "17C40",
+      "53C42",
+      "17A75",
+      "17B20",
+      "81P16",
+      "35F20",
+      "11E76",
+      "68V20"
+    ]
+  },
+  "sources": [
+    {
+      "type": "paper",
+      "title": "On the planes of Cartan's cubics and the missing seven",
+      "authors": [
+        "Robert R. MacGregor"
+      ],
+      "relationship": "formalizes",
+      "id": "https://github.com/macgregor-sudo/cartan-cubic-planes/releases/tag/v1.0.0",
+      "location": "Theorem A, Theorem B and the results indexed in docs/PAPER-COVERAGE.tsv",
+      "note": "The paper is attached to the v1.0.0 release of this repository as a PDF and its TeX source, and has been submitted to Hexagon. The repository's README and docs/PAPER-COVERAGE.tsv identify its numbered statements and the corresponding Lean declarations."
+    },
+    {
+      "type": "paper",
+      "title": "Sur des familles remarquables d'hypersurfaces isoparamétriques dans les espaces sphériques",
+      "authors": [
+        "É. Cartan"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1007/BF01580289",
+      "location": "Part I, §I, nos. 2–6, pp. 337–341, Eqs. (13)–(17), and Part II, §§VII–IX, pp. 359–367",
+      "note": "The classical isoparametric cubic models and their harmonic classification. The Lean library proves the marked harmonic identification at a unit idempotent."
+    },
+    {
+      "type": "paper",
+      "title": "A generalization of Cartan's theorem on isoparametric cubics",
+      "authors": [
+        "V. G. Tkachev"
+      ],
+      "relationship": "independently-proves",
+      "id": "https://arxiv.org/abs/1001.2387v2",
+      "location": "Theorem 1.1, Eq. (3) and §3",
+      "note": "The Lean proof derives the nonharmonic axial normal form by taking a trace of the Peirce pair identity. This proves the nonharmonic alternative independently and makes the closed-decomposition theorem unconditional."
+    },
+    {
+      "type": "paper",
+      "title": "Über die Composition der quadratischen Formen von beliebig vielen Variabeln",
+      "authors": [
+        "A. Hurwitz"
+      ],
+      "relationship": "background",
+      "id": "https://gdz.sub.uni-goettingen.de/download/pdf/PPN252457811_1898/LOG_0034.pdf",
+      "location": "1898, pp. 309–316",
+      "note": "The dimension restriction for norm-preserving bilinear multiplication. The marked-slot proof obtains it by unitizing and applying the Euclidean composition-algebra classification."
+    },
+    {
+      "type": "paper",
+      "title": "The octonions",
+      "authors": [
+        "J. C. Baez"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/math/0105155",
+      "location": "§1.1, Theorem 1; §2.2; §4.1, Eq. (19); §4.3, Table 5",
+      "note": "The normed-division-algebra classification, octonion conjugation and automorphisms, derivations of Hermitian Jordan algebras, and the magic square."
+    },
+    {
+      "type": "book",
+      "title": "Octonions, Jordan Algebras and Exceptional Groups",
+      "authors": [
+        "T. A. Springer",
+        "F. D. Veldkamp"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1007/978-3-662-12622-6",
+      "location": "Chapters 1 and 5",
+      "note": "Composition algebras and the Albert algebra."
+    },
+    {
+      "type": "paper",
+      "title": "Harmonic cubic homogeneous polynomials such that the norm-squared of the Hessian is a multiple of the Euclidean quadratic form",
+      "authors": [
+        "D. J. F. Fox"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/1905.00071",
+      "location": "§8, p. 36, Eqs. (8.4)–(8.6)",
+      "note": "Trace-cube coordinates for the Cartan cubics, including the octonionic case."
+    },
+    {
+      "type": "paper",
+      "title": "Exceptional Lie groups",
+      "authors": [
+        "I. Yokota"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/0902.0431v1",
+      "location": "§§1.14–1.16, Lemmas 2.1.1(2) and 2.2.1(2), Prop. 2.3.7, Prop. 2.4.1(2), Thms. 2.6.1 and 2.7.1, Prop. 2.8.2, and §2.12",
+      "note": "The native frame-stabilizer theorem verifies the cyclic-slot triality characterization. This source also records the compact Albert trace and spectral facts, transitivity, the diagonal Spin(8), and compact first-Tits coordinates."
+    },
+    {
+      "type": "paper",
+      "title": "Algèbres alternatives, algèbres de Jordan et algèbres de Lie exceptionnelles",
+      "authors": [
+        "Jacques Tits"
+      ],
+      "relationship": "background",
+      "id": "Indagationes Mathematicae 28 (1966), 223–237",
+      "location": "pp. 223–237. Cited in J. C. Baez, The octonions, §4.3, reference [96].",
+      "note": "The original construction of the magic square. The second-row result takes the compact type identifications as input."
+    },
+    {
+      "type": "book",
+      "title": "Structure and Representations of Jordan Algebras",
+      "authors": [
+        "N. Jacobson"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1090/coll/039",
+      "location": "p. 412, as cited in Elduque and Kochetov, arXiv:1009.1218v3, Remark 6.5",
+      "note": "The presentation of Tits's first construction used in the discussion of the Albert grading."
+    },
+    {
+      "type": "paper",
+      "title": "A generalization of the first Tits construction",
+      "authors": [
+        "T. Moran",
+        "S. Pumplün"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/2403.16342",
+      "location": "§1.4, Eq. (13), and §2.1, Theorems 3(i) and 4(i)",
+      "note": "A description of Jacques Tits's first construction using degree-three algebras and its norm."
+    },
+    {
+      "type": "paper",
+      "title": "On the local geometry of the tight 39-point code in the octonionic projective plane",
+      "authors": [
+        "Robert R. MacGregor"
+      ],
+      "relationship": "background",
+      "id": "https://hexagonmath.org/abs/2611.00340v2",
+      "location": "§4.2, Eqs. (10)–(11), and Appendix A.1",
+      "note": "Compact first-Tits coordinates and the product and trace-form identification. The Lean library proves the corresponding native Jordan isometry."
+    },
+    {
+      "type": "paper",
+      "title": "Optimal simplices and codes in projective spaces",
+      "authors": [
+        "H. Cohn",
+        "A. Kumar",
+        "G. Minton"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/1308.3188v4",
+      "location": "§8.2, Theorem 8.3, and Table 2.3",
+      "note": "Construction of a tight 39-point Cayley-plane code consisting of thirteen mutually unbiased frames. The present results concern the share support and the automorphism orbit of systems attaining 52."
+    },
+    {
+      "type": "paper",
+      "title": "On orthostochastic, unistochastic and qustochastic matrices",
+      "authors": [
+        "O. Chterental",
+        "D. Ž. Đoković"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/0708.4051v1",
+      "location": "§4, p. 15, Theorems 5.1 and 5.4, proof of Theorem 5.4, pp. 24–25, and Problem 6.3",
+      "note": "Order-three quaternionic Hadamard normalization, the unbiased-triple normal form used for the sharp share bound, and the previous dimension bound."
+    },
+    {
+      "type": "paper",
+      "title": "Mutually unbiased bases in composite dimensions -- a review",
+      "authors": [
+        "D. McNulty",
+        "S. Weigert"
+      ],
+      "relationship": "background",
+      "id": "doi:10.22331/q-2026-04-01-2051",
+      "location": "§9.3",
+      "note": "Context for the possible number of unbiased bases in quaternionic dimension three."
+    },
+    {
+      "type": "paper",
+      "title": "All mutually unbiased bases in dimensions two to five",
+      "authors": [
+        "S. Brierley",
+        "S. Weigert",
+        "I. Bengtsson"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/0907.4097v2",
+      "location": "§2.2, Eqs. (6)–(11), pp. 4–5",
+      "note": "The Fourier pair and the classification of complex unbiased bases in dimension three. The Lean four-plane proof uses the pair normalization and then determines the remaining planes from closure."
+    },
+    {
+      "type": "book",
+      "title": "Combinatorial Theory",
+      "authors": [
+        "M. Hall, Jr."
+      ],
+      "relationship": "background",
+      "location": "2nd ed., Wiley, New York, 1986. Order-three projective planes.",
+      "note": "The manuscript cites the classical uniqueness of the order-three projective plane. The Lean proof constructs affine incidence coordinates.",
+      "id": "Wiley, New York, 1986, 2nd edition"
+    },
+    {
+      "type": "book",
+      "title": "Projective Planes",
+      "authors": [
+        "D. R. Hughes",
+        "F. C. Piper"
+      ],
+      "relationship": "background",
+      "location": "Graduate Texts in Mathematics 6, Springer, New York, 1973. Order-three projective planes.",
+      "note": "The order-three projective plane is the incidence structure of the closed quartets at equality.",
+      "id": "Graduate Texts in Mathematics 6, Springer, New York, 1973"
+    },
+    {
+      "type": "paper",
+      "title": "A Moufang loop, the exceptional Jordan algebra, and a cubic form in 27 variables",
+      "authors": [
+        "R. L. Griess, Jr."
+      ],
+      "relationship": "background",
+      "id": "doi:10.1016/0021-8693(90)90176-O",
+      "location": "Eqs. (2.9), (4.3)–(4.6)",
+      "note": "The ternary Albert grading underlying the reference thirteen-plane system."
+    },
+    {
+      "type": "paper",
+      "title": "Gradings on the Albert algebra and on 𝔣₄",
+      "authors": [
+        "C. Draper Fontanals",
+        "C. Martín González"
+      ],
+      "relationship": "background",
+      "id": "doi:10.4171/RMI/585",
+      "location": "§2.4, Eq. (4), and §3.4",
+      "note": "The first-Tits norm formula and the ternary grading on the Albert algebra."
+    },
+    {
+      "type": "paper",
+      "title": "Weyl groups of fine gradings on matrix algebras, octonions and the Albert algebra",
+      "authors": [
+        "A. Elduque",
+        "M. Kochetov"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/1009.1462",
+      "location": "§4.5, Theorem 4.8 and Remark 4.9",
+      "note": "The Weyl group and stabilizer of the ternary Albert grading give context for the comparison with the grading orbit."
+    },
+    {
+      "type": "paper",
+      "title": "Mutually unbiased bases and orthogonal decompositions of Lie algebras",
+      "authors": [
+        "P. O. Boykin",
+        "M. Sitharam",
+        "P. H. Tiep",
+        "P. Wocjan"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/quant-ph/0506089",
+      "location": "Theorems 5.1–5.2",
+      "note": "The complex relation between mutually unbiased bases and orthogonal Lie decompositions."
+    },
+    {
+      "type": "paper",
+      "title": "Structure theory of semisimple Lie groups",
+      "authors": [
+        "A. W. Knapp"
+      ],
+      "relationship": "background",
+      "id": "https://www.math.stonybrook.edu/~aknapp/pdf-files/1-27.pdf",
+      "location": "Theorem 3.6, p. 16, and §3, pp. 16–17",
+      "note": "Conjugacy and complexification of compact Cartan subalgebras. The library proves native conjugacy and the needed complexification statements."
+    },
+    {
+      "type": "paper",
+      "title": "Jordan gradings on exceptional simple Lie algebras",
+      "authors": [
+        "A. Elduque"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/0810.2737",
+      "location": "§1 and Theorem 3.5",
+      "note": "The ternary grading of complex 𝔣₄ and its Cartan decomposition."
+    },
+    {
+      "type": "book",
+      "title": "Orthogonal Decompositions and Integral Lattices",
+      "authors": [
+        "A. I. Kostrikin",
+        "P. H. Tiep"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1515/9783110901757",
+      "location": "Theorem 3.1.2, pp. 85–86",
+      "note": "Orthogonal Cartan decompositions associated with the ternary grading."
+    },
+    {
+      "type": "paper",
+      "title": "The unique extremal threemodular lattice of rank 26, the generalized hexagon (2,8), and the tight Cayley-plane 5-design",
+      "authors": [
+        "G. Höhn"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/2609.25086v1",
+      "location": "Lemma 5.1",
+      "note": "The invariants of the traceless Albert representation. The formal proof derives scalarity of the commutant directly."
+    },
+    {
+      "type": "paper",
+      "title": "Quaternions and matrices of quaternions",
+      "authors": [
+        "F. Zhang"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1016/0024-3795(95)00543-9",
+      "location": "Spectral results for quaternionic Hermitian matrices",
+      "note": "The quaternionic Hermitian spectral theorem."
+    },
+    {
+      "type": "book",
+      "title": "Topics in Quaternion Linear Algebra",
+      "authors": [
+        "L. Rodman"
+      ],
+      "relationship": "background",
+      "location": "Theorem 5.3.6, as cited in arXiv:2012.03621, §3.1",
+      "note": "Quaternionic Hermitian spectral decomposition. The locator is from Macías-Virgós, Pereira-Sáez and Tarrío-Tobar.",
+      "id": "Princeton University Press, Princeton, 2014"
+    },
+    {
+      "type": "paper",
+      "title": "The exceptional simple Lie algebras F₄ and E₆",
+      "authors": [
+        "C. Chevalley",
+        "R. D. Schafer"
+      ],
+      "relationship": "background",
+      "id": "doi:10.1073/pnas.36.2.137",
+      "location": "pp. 137–141",
+      "note": "The Albert-algebra construction of the exceptional Lie algebras, used alongside the type identifications in Tits's magic square."
+    },
+    {
+      "type": "book",
+      "title": "An Introduction to Nonassociative Algebras",
+      "authors": [
+        "R. D. Schafer"
+      ],
+      "relationship": "background",
+      "location": "Academic Press, 1966. Commutator derivations in Jordan algebras.",
+      "note": "The commutators of the multiplication operators are derivations. The library's second-row theorem assumes Tits's magic-square type identifications.",
+      "id": "Academic Press, 1966"
+    },
+    {
+      "type": "paper",
+      "title": "Bounds on multiscalar CFTs in the ε expansion",
+      "authors": [
+        "M. Hogervorst",
+        "C. Toldo"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/2010.16222",
+      "location": "Eqs. (3.12)–(3.16)",
+      "note": "The orthogonal splitting of a symmetric quartic into harmonic parts and the trace part."
+    },
+    {
+      "type": "paper",
+      "title": "Seeking SUSY fixed points in the 4−ε expansion",
+      "authors": [
+        "P. Liendo",
+        "J. Rong"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/2107.14515",
+      "location": "Eqs. (2.1)–(2.4), p. 5",
+      "note": "The one-loop tensor equations and the gradient potential in the conventions used for the flow."
+    },
+    {
+      "type": "paper",
+      "title": "Seeking fixed points in multiple coupling scalar theories in the ε expansion",
+      "authors": [
+        "H. Osborn",
+        "A. Stergiou"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/1707.06165v7",
+      "location": "Appendix C, Eqs. (C.5)–(C.7), p. 57",
+      "note": "The earlier A-function bound for cubic scalar theories."
+    },
+    {
+      "type": "paper",
+      "title": "Explorations in scalar fermion theories: β-functions, supersymmetry and fixed points",
+      "authors": [
+        "I. Jack",
+        "H. Osborn",
+        "T. Steudtner"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/2301.10903v3",
+      "location": "§7.2, Eqs. (7.13)–(7.14), (7.23)–(7.24), pp. 20–22",
+      "note": "A-function and higher-order flow context."
+    },
+    {
+      "type": "paper",
+      "title": "Bootstrapping the 𝒩 = 1 Wess–Zumino models in three dimensions",
+      "authors": [
+        "J. Rong",
+        "N. Su"
+      ],
+      "relationship": "background",
+      "id": "https://arxiv.org/abs/1910.08578v1",
+      "location": "Eq. (2.10), Table III, p. 9",
+      "note": "The SU(3) and F₄ fixed points that occur as the limiting cubics."
+    }
+  ],
+  "related_formalizations": [
+    {
+      "id": "https://github.com/macgregor-sudo/albert-sequential-measurements/tree/10e5ca8ce341a1cb3a812569d3081005a40007c8",
+      "relationship": "builds-on",
+      "note": "Albert Sequential Measurements v2.0.0 supplies the native compact Albert algebra and operators. Its standalone statement supplies Cayley–Dickson and octonionic Hermitian coordinate definitions."
+    },
+    {
+      "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-11-27-000005&version=1",
+      "relationship": "builds-on",
+      "note": "Palomar v1 registers the exact pinned Albert Sequential Measurements dependency and Challenge coordinate source at 10e5ca8ce341a1cb3a812569d3081005a40007c8."
+    },
+    {
+      "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-09-13-000001&version=1",
+      "relationship": "adapts",
+      "note": "First Tits coordinates and identities adapted from the split-frame source at dd06ef5d423a0e4a5d814d2c221e999b98887ee1. The source headers and notices identify the specific files."
+    },
+    {
+      "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-16-000013&version=1",
+      "relationship": "builds-on",
+      "note": "The pinned sequential-measurements package carries the native Glennie Jordan algebra adapted from the compact Albert recognition source at 40d3b344180d9ddb78aaa2876873377c1e631515."
+    },
+    {
+      "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-29-000034&version=1",
+      "relationship": "adapts",
+      "note": "ThirteenPlanes/NativeTits.lean specializes the compact first-Tits coordinates TitsS.titsOfNative from Proofs/TitsForm.lean in the earlier tight 39-point formalization. The specialization uses the pinned native Albert carrier and takes the third slot by conjugate transpose. Original source at https://github.com/macgregor-sudo/tight-39-code/blob/46f01c135aacea9003435e7f1dc99b4a69568e83/Proofs/TitsForm.lean#L61."
+    },
+    {
+      "id": "https://palomar-registry.org/entry?id=PALOMAR-2026-08-29-000018&version=1",
+      "relationship": "builds-on",
+      "note": "The isotope proofs use CompositionAlgebras.Composition.Defs and CompositionAlgebras.Composition.Classification through the attributed port of composition-algebras at 98d4437ce1bfd8d042b8383e0cfe28ec3e595eee in the sequential-measurements package."
+    },
+    {
+      "id": "https://github.com/TauCetiProject/TauCeti/tree/d91980bdc255e6e50506be147ad9bcb88eb9fcc0",
+      "relationship": "adapts",
+      "note": "The proof library includes four complete Apache-2.0 Tau Ceti modules at d91980bdc255e6e50506be147ad9bcb88eb9fcc0. Each preserves its original source and notices and has one appended provenance comment. THIRD_PARTY_NOTICES.md lists the exact files and links."
+    }
+  ],
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "models": [
+          "Claude Fable 5.2",
+          "Claude Opus 5.5",
+          "GPT-6.2 Astra",
+          "GPT-6.2 Sol",
+          "Gemini 4 Carbon",
+          "Gemini 4 Neon"
+        ],
+        "tool_setup": "AI agents used source, manuscript and proof tools under Robert R. MacGregor’s direction.",
+        "note": "Claude and OpenAI agents produced mathematical arguments, manuscript text and Lean proofs. The Gemini agents contributed mathematical analysis. The manuscript credits the six systems collectively. Adapted and copied code retains the attribution listed in THIRD_PARTY_NOTICES.md."
+      },
+      {
+        "method": "agent",
+        "models": [
+          "Claude Fable 5.2",
+          "Claude Opus 5.5",
+          "GPT-6.2 Sol",
+          "Claude Sonnet 5.5"
+        ],
+        "tool_setup": "Separate agents checked proofs, matched Lean and manuscript statements, and checked references.",
+        "note": "Claude and OpenAI agents reviewed the mathematics, statements and source. Claude Sonnet 5.5 checked literature citations and classification codes."
+      },
+      {
+        "method": "other",
+        "tool_setup": "Lean 4.36.0 and Mathlib at fc4f59e577feb1a4956671bc04ac18aaaf8cd842, with the pinned Lake manifest.",
+        "note": "Local Lean compilation and axiom checks are separate from agent review."
+      }
+    ]
+  },
+  "review": {
+    "status": "agent-reviewed",
+    "reviewers": [
+      "Claude Fable 5.2",
+      "Claude Opus 5.5",
+      "GPT-6.2 Sol"
+    ],
+    "notes": "Separate AI reviewers checked manuscript arguments and matched numbered statements to Lean declarations, including the standalone comparison statements. The review recorded here is AI review."
+  },
+  "status": {
+    "scope": "Thirteen declarations selected in comparator.json. The statement module imports only Mathlib. The proof library uses pinned Mathlib and Albert Sequential Measurements and includes four attributed Tau Ceti source files. docs/PAPER-COVERAGE.tsv indexes the broader proof library against the manuscript.",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "challenge_placeholders": "Each designated statement hole specifies a comparison target. The Solution uses a separate copy of the mathematical definitions.",
+    "main_results": [
+      {
+        "name": "Challenge.fields_classification",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.fields_realizations",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.closed_decomposition_classification",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.closed_decomposition_realizations",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.sum_rule",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.energy_recovery_labeled",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.energy_recovery_endpoints",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.energy_recovery_unlabelled",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.Quaternionic.quaternionicLowerBound",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.Quaternionic.quaternionicFiveBound",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.albertCompletion",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.albertSparsestSystem",
+        "comparator_config": "comparator.json"
+      },
+      {
+        "name": "Challenge.thirteen_plane_share_support",
+        "comparator_config": "comparator.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "challenge_module": "CartanCubicPlanes.Challenge",
+  "solution_module": "CartanCubicPlanes.Solution",
+  "theorem_names": [
+    "Challenge.fields_classification",
+    "Challenge.fields_realizations",
+    "Challenge.closed_decomposition_classification",
+    "Challenge.closed_decomposition_realizations",
+    "Challenge.sum_rule",
+    "Challenge.energy_recovery_labeled",
+    "Challenge.energy_recovery_endpoints",
+    "Challenge.energy_recovery_unlabelled",
+    "Challenge.Quaternionic.quaternionicLowerBound",
+    "Challenge.Quaternionic.quaternionicFiveBound",
+    "Challenge.albertCompletion",
+    "Challenge.albertSparsestSystem",
+    "Challenge.thirteen_plane_share_support"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
